@@ -3,6 +3,7 @@
 const headerCityButton = document.querySelector('.header__city-button');
 const cartListGoods = document.querySelector('.cart__list-goods');
 const cartTotalCost = document.querySelector('.cart__total-cost');
+const cartBtnBuy = document.querySelector('.cart__btn-buy');
 //берем хеш и обрезаем решотку
 let hash = location.hash.substring(1);
 
@@ -147,6 +148,9 @@ cartOverlay.addEventListener('click', event => {
     closeModal();
   }
 });
+cartBtnBuy.addEventListener('click', () => {
+  alert("Это учебный проект - данная функция отсутствует! В реальном поекте, можно будет реализовать оформление заказа")
+})
 
 try {
   const goodsList = document.querySelector('.goods__list');
@@ -286,8 +290,6 @@ try {
       }
     })
   });
-
-
 
   getGoods(renderCardGood, 'id', hash.substring(2));
 
